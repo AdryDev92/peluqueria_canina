@@ -130,6 +130,7 @@ class PerrosController extends BaseController
             $validator->add('edad:Edad', 'required', [], $requiredFieldMessageError);
 
 
+
             // Extraemos los datos enviados por POST
             $perros['id'] = $id;
             $perros['nombre'] = htmlspecialchars(trim($_POST['nombre']));
