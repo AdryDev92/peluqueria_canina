@@ -144,7 +144,7 @@ class PerrosController extends BaseController
                     'id' => $perros['id'],
                     'nombre' => $perros['nombre'],
                     'raza' => $perros['raza'],
-                    'peso' => $perros['raza'],
+                    'peso' => $perros['peso'],
                     'color' => $perros['color'],
                     'edad' => $perros['edad']
 
@@ -174,7 +174,7 @@ class PerrosController extends BaseController
             $perros = Perro::query()->orderBy('id', 'desc')->get();
 
             return $this->render('home.twig', [
-                'perro' => $perros,
+                'perros' => $perros,
                 'webInfo' => $webInfo
             ]);
 

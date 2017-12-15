@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\Auth\AuthController;
 use App\Controller\Auth\RegisterController;
+use App\Model\Perro;
 use App\Model\Usuario;
 
 class HomeController extends BaseController {
