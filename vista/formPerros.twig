@@ -13,17 +13,17 @@
                 <div class="col-lg-6">
                     <div class="form-group  {% if errors['nombre'] %}has-error{% endif %}">
                         <label for="inputName">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del perro"
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del perro"
                                value="{{ perro.nombre }}">
                     </div>
-                    {{ generateAlert(errors, 'name') }}
+                    {{ generateAlert(errors, 'nombre') }}
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group {% if errors['raza'] %}has-error{% endif %}">
                             <label for="inputRace">Raza</label>
-                            <input type="text" class="form-control" id="race" name="race" placeholder="Raza"
+                            <input type="text" class="form-control" id="raza" name="raza" placeholder="Raza"
                                    value="{{ perro.raza }}">
                         </div>
                         {{ generateAlert(errors, 'raza') }}
@@ -31,8 +31,8 @@
 
                     <div class="col-lg-6">
                         <div class="form-group{% if errors['peso'] %}has-error{% endif %}">
-                            <label for="inputWeight">Status</label>
-                            <input type="text" class="form-control" id="weight" name="weight" placeholder="Peso"
+                            <label for="inputWeight">Peso</label>
+                            <input type="text" class="form-control" id="peso" name="peso" placeholder="Peso"
                                    value="{{ perro.peso }}">
                         </div>
                         {{ generateAlert(errors, 'peso') }}
@@ -42,7 +42,7 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="form-group {% if errors['color'] %}has-error{% endif %}">
-                            <label for="inputColor">Based On</label>
+                            <label for="inputColor">Color</label>
                             <input type="text" class="form-control" id="color" name="color" placeholder="Color"
                                    value="{{ perro.color }}"/>
                         </div>
@@ -50,15 +50,16 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="form-group {% if errors['edad'] %}has-error{% endif %}">
-                            <label for="inputAge">Origin</label>
-                            <input type="text" class="form-control" id="inputAge" name="age"
+                            <label for="inputAge">Edad</label>
+                            <input type="text" class="form-control" id="edad" name="edad" placeholder="Edad"
                                    value="{{ perro.edad }}">
                         </div>
                         {{ generateAlert(errors, 'edad') }}
                     </div>
-
                 </div>
             </div>
+
+            <hr>
 
             <input type="hidden" name="_method" value="{{ webInfo.method }}">
             <button type="submit" class="btn btn-default">{{ webInfo.submit }}</button>

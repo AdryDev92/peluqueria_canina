@@ -10,7 +10,7 @@ class BaseController
     public function __construct()
     {
         // Inicializar motor de template
-        $loader = new \Twig_Loader_Filesystem('../views');
+        $loader = new \Twig_Loader_Filesystem('../vista');
         $this->templateEngine = new \Twig_Environment($loader, [
             'debug' => true,
             'cache' => false

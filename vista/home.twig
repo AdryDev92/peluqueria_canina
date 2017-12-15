@@ -8,37 +8,37 @@
     <div class="container">
 
         <h1>{{ webInfo.h1 }}</h1>
-        {% if distros.count %}
+        {% if perros.count %}
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Logo</th>
-                    <th>Name</th>
-                    <th>Os Type</th>
-                    <th>Version</th>
-                    <th>Web</th>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Peso</th>
+                    <th>Color</th>
+                    <th>Edad</th>
                     <th>Editar</th>
                     <th>Borrar</th>
                 </tr>
                 </thead>
                 <tbody>
-                {% for distro in distros %}
+                {% for perro in perros %}
                     <tr>
-                        <td><a href="distros/{{ distro.id }}"><img src="{{ distro.image }}" alt="Logo de {{ distro.name }}" class="logo"></a></td>
-                        <td><a href="distros/{{ distro.id }}">{{ distro.name }}</a></td>
-                        <td>{{ distro.basedon }}</td>
-                        <td>{{ distro.version }}</td>
-                        <td>{{ distro.web }}</td>
+                        <td><a href="perros/{{ perro.id }}">{{ perro.nombre }}</a></td>
+                        <td>{{ perro.raza }}</td>
+                        <td>{{ perro.peso }}</td>
+                        <td>{{ perro.color }}</td>
+                        <td>{{ perro.edad }}</td>
                         <td>
-                            <a href="/distros/edit/{{ distro.id }}" class="editar btn btn-link">
+                            <a href="/perros/edit/{{ perro.id }}" class="editar btn btn-link">
                                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                             </a>
                         </td>
                         <td>
-                            <form action="/distros" method="POST" id="deleteDistro-{{ distro.id }}">
-                                <input type="hidden" name="id" value="{{ distro.id }}">
+                            <form action="/perros" method="POST" id="deletePerro-{{ perro.id }}">
+                                <input type="hidden" name="id" value="{{ perro.id }}">
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" id="deleteForm" class="btn btn-link btn-alert" onclick="deleteDistro({{ distro.id }})"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                                <button type="submit" id="deleteForm" class="btn btn-link btn-alert" onclick="deletePerro({{ perro.id }})"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
                             </form>
                         </td>
                     </tr>
@@ -46,8 +46,6 @@
 
                 </tbody>
             </table>
-        {% else %}
-            <h2>No hay resultados. Busca por otros criterios, porfiplis!!!</h2>
         {% endif %}
     </div><!-- /.container -->
 {% endblock %}

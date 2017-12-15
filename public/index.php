@@ -19,7 +19,6 @@ if(file_exists(__DIR__.'/../.env')){
     $dotenv->load();
 }
 
-
 // Instancia de Eloquent
 $capsule = new Capsule;
 $capsule->addConnection([

@@ -51,10 +51,10 @@ class PerrosController extends BaseController
 
             // Extraemos los datos enviados por POST
             $perros['nombre'] = htmlspecialchars(trim($_POST['nombre']));
-            $distro['raza'] = htmlspecialchars(trim($_POST['raza']));
-            $distro['peso'] = htmlspecialchars(trim($_POST['peso']));
-            $distro['color'] = htmlspecialchars(trim($_POST['color']));
-            $distro['edad'] = htmlspecialchars(trim($_POST['edad']));
+            $perros['raza'] = htmlspecialchars(trim($_POST['raza']));
+            $perros['peso'] = htmlspecialchars(trim($_POST['peso']));
+            $perros['color'] = htmlspecialchars(trim($_POST['color']));
+            $perros['edad'] = htmlspecialchars(trim($_POST['edad']));
 
 
             if ($validator->validate($_POST)) {
@@ -191,7 +191,7 @@ class PerrosController extends BaseController
                 return $this->render('404.twig', ['webInfo' => $webInfo]);
             }
 
-            return $this->render('distro/distro.twig', [
+            return $this->render('perro/perro.twig', [
                 'perro' => $perros,
                 'webInfo' => $webInfo,
             ]);
