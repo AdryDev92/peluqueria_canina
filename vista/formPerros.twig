@@ -1,0 +1,75 @@
+{% extends "layout.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ '' | url }}css/bootstrap-tokenfield.min.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ webInfo.h1 }}</h1>
+        <form method="post">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group  {% if errors['nombre'] %}has-error{% endif %}">
+                        <label for="inputName">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del perro"
+                               value="{{ perro.nombre }}">
+                    </div>
+                    {{ generateAlert(errors, 'name') }}
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group {% if errors['raza'] %}has-error{% endif %}">
+                            <label for="inputRace">Raza</label>
+                            <input type="text" class="form-control" id="race" name="race" placeholder="Raza"
+                                   value="{{ perro.raza }}">
+                        </div>
+                        {{ generateAlert(errors, 'raza') }}
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group{% if errors['peso'] %}has-error{% endif %}">
+                            <label for="inputWeight">Status</label>
+                            <input type="text" class="form-control" id="weight" name="weight" placeholder="Peso"
+                                   value="{{ perro.peso }}">
+                        </div>
+                        {{ generateAlert(errors, 'peso') }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-group {% if errors['color'] %}has-error{% endif %}">
+                            <label for="inputColor">Based On</label>
+                            <input type="text" class="form-control" id="color" name="color" placeholder="Color"
+                                   value="{{ perro.color }}"/>
+                        </div>
+                        {{ generateAlert(errors, 'color') }}
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group {% if errors['edad'] %}has-error{% endif %}">
+                            <label for="inputAge">Origin</label>
+                            <input type="text" class="form-control" id="inputAge" name="age"
+                                   value="{{ perro.edad }}">
+                        </div>
+                        {{ generateAlert(errors, 'edad') }}
+                    </div>
+
+                </div>
+            </div>
+
+            <input type="hidden" name="_method" value="{{ webInfo.method }}">
+            <button type="submit" class="btn btn-default">{{ webInfo.submit }}</button>
+        </form>
+    </div><!-- /.container -->
+
+{% endblock %}
+
+{% block js %}
+    <script src="{{ '' | url }}js/bloodhound/bloodhound.js"></script>
+    <script src="{{ '' | url }}js/typehead/typehead.js"></script>
+    <script src="{{ '' | url }}js/tokenfield/bootstrap-tokenfield.min.js"></script>
+    <script src="{{ '' | url }}js/tokenfield/tokenfield-distroada.js"></script>
+{% endblock %}

@@ -1,9 +1,9 @@
 <?php
-namespace App\Controllers;
+namespace App\Controller;
 
-use App\Controlador\Auth\AuthController;
-use App\Controlador\Auth\RegisterController;
-use App\Modelo\Usuario;
+use App\Controller\Auth\AuthController;
+use App\Controller\Auth\RegisterController;
+use App\Model\Usuario;
 
 class HomeController extends BaseController {
 
@@ -13,9 +13,9 @@ class HomeController extends BaseController {
      * @return string Render de la página
      */
     public function getIndex(){
-        $distros = new DistrosController();
+        $perros = new PerrosController();
 
-        return $distros->getIndex();
+        return $perros->getIndex();
     }
 
     public function getContacto(){

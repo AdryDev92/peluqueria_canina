@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modelo;
+namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 
 class Perro extends Model{

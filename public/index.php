@@ -49,11 +49,11 @@ $router->filter('auth', function(){
 });
 
 $router->group(['before' => 'auth'], function ($router){
-    $router->get('/perro/new', ['\App\Controller\DistrosController', 'getNew']);
-    $router->post('/perro/new', ['\App\Controller\DistrosController', 'postNew']);
-    $router->get('/perro/edit/{id}', ['\App\Controller\DistrosController', 'getEdit']);
-    $router->put('/perro/edit/{id}', ['\App\Controller\DistrosController', 'putEdit']);
-    $router->delete('/perro/', ['\App\Controller\DistrosController', 'deleteIndex']);
+    $router->get('/perros/new', ['\App\Controller\PerrosController', 'getNew']);
+    $router->post('/perros/new', ['\App\Controller\PerrosController', 'postNew']);
+    $router->get('/perros/edit/{id}', ['\App\Controller\PerrosController', 'getEdit']);
+    $router->put('/perros/edit/{id}', ['\App\Controller\PerrosController', 'putEdit']);
+    $router->delete('/perros/', ['\App\Controller\PerrosController', 'deleteIndex']);
     $router->get('/logout', ['\App\Controller\HomeController', 'getLogout']);
 });
 
@@ -75,8 +75,8 @@ $router->group(['before' => 'noAuth'], function ($router){
 
 // Rutas sin filtros
 $router->get('/',['\App\Controller\HomeController', 'getIndex']);
-$router->get('/distros/{id}', ['\App\Controller\DistrosController', 'getIndex']);
-$router->post('/distros/{id}', ['\App\Controller\DistrosController', 'postIndex']);
+$router->get('/perros/{id}', ['\App\Controller\PerrosController', 'getIndex']);
+$router->post('/perros/{id}', ['\App\Controller\PerrosController', 'postIndex']);
 
 
 $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());

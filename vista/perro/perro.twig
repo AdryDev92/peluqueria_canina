@@ -1,0 +1,30 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-10 title">
+                        <div class="col-lg-12">
+                            <h1>{{ perro.nombre|raw }}</h1>
+                        </div>
+                        <div class="col-lg-5">
+                            <p>Raza: <strong>{{ perro.raza | raw }}</strong></p>
+                            <p>Peso: <strong>{{ perro.peso | raw }}</strong></p>
+                        </div>
+                        <div class="col-lg-5">
+                            <p>Color: <strong>{{ perro.color | raw }}</strong></p>
+                            <p>Edad: <strong>{{ perro.edad | raw }}</strong></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,37 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    <div class="container">
+
+        <form class="form-signin" method="post">
+            <h2 class="form-signin-heading">Registro</h2>
+            <div class="form-group {% if errors['inputName'] %}has-error{% endif %}">
+                <label for="inputName" class="sr-only">Email</label>
+                <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Nombre" autofocus>
+            </div>
+            {{ generateAlert(errors, 'inputName') }}
+            <div class="form-group {% if errors['inputEmail'] %}has-error{% endif %}">
+                <label for="inputEmail" class="sr-only">Email</label>
+                <input type="text" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email" autofocus>
+            </div>
+            {{ generateAlert(errors, 'inputEmail') }}
+            <div class="form-group {% if errors['inputPassword1'] %}has-error{% endif %}">
+                <label for="inputPassword1" class="sr-only">Password</label>
+                <input type="password" id="inputPassword1" class="form-control" name="inputPassword1" placeholder="Password">
+            </div>
+            {{ generateAlert(errors, 'inputPassword1') }}
+            <div class="form-group {% if errors['inputPassword2'] %}has-error{% endif %}">
+                <label for="inputPassword2" class="sr-only">Password</label>
+                <input type="password" id="inputPassword2" class="form-control" name="inputPassword2" placeholder="Confirma Password">
+            </div>
+            {{ generateAlert(errors, 'inputPassword2') }}
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Recuérdame
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Registrarse</button>
+        </form>
+
+    </div> <!-- /container -->
+{% endblock %}
