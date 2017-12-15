@@ -8,6 +8,8 @@ La estructura del proyecto está basada
 en MVC (modelo-vista-controlador) y en Api Restfull.
 Crea su propia api a `JSON`.
 
+
+
 ### Contenido y características
 - Registro de usuarios
 - Login y logout
