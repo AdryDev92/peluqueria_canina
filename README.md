@@ -22,7 +22,7 @@ con los datos correspondientes a la base de datos.
 ## Cargar la base de datos
 
 Para construir la base de datos, 
-utiliza el script `createdb.sql`
+utiliza el script [`createdb.sql`](https://github.com/AdryDev92/peluqueria_canina/blob/master/createdb.sql)
 
 ## Instalación de dependencias
 Desde la terminal, usa el siguiente comando:
