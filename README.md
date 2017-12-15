@@ -1,5 +1,5 @@
 # Peluqueria canina
-final project of backend in php in 2nd's year web app development
+Proyecto final de programación entorno servidor de 2do año basado en aplicación de registros para peluquería canina.
 
 ---
 
