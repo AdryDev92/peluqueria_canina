@@ -34,6 +34,9 @@ composer update
 ```
 Éste recibe las dependencias desde el `composer.json`
 
+## Configuración de ruta de inicio
+Desde MAMP -> Preferences -> Web Server -> Document root(clic izquierdo) -> ruta/de/tu/proyecto/carpeta-public
+
 
 ### Tecnologías usadas
 
