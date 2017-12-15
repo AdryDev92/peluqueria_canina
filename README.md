@@ -24,6 +24,13 @@ con los datos correspondientes a la base de datos.
 Para construir la base de datos, 
 utiliza el script `createdb.sql`
 
+## Instalación de dependencias
+Desde la termina, usar el comando:
+
+```
+composer install
+```
+
 
 ### Tecnologías usadas
 
