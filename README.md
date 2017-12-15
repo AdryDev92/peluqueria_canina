@@ -28,7 +28,7 @@ utiliza el script `createdb.sql`
 Desde la termina, usar el comando:
 
 ```
-composer install
+composer update
 ```
 
 
