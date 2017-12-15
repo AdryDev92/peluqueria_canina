@@ -25,11 +25,12 @@ Para construir la base de datos,
 utiliza el script `createdb.sql`
 
 ## Instalación de dependencias
-Desde la termina, usar el comando:
+Desde la terminal, usa el siguiente comando:
 
 ```
 composer update
 ```
+Éste recibe las dependencias desde el `composer.json`
 
 
 ### Tecnologías usadas
