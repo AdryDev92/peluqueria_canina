@@ -1,2 +1,6 @@
 # peluqueria_canina
-final project of backend in php in 2nd's year web app development
+Proyecto final de php de backend basado en una aplicación de registro para peluquería canina.
+
+---
+
+## Estructura del proyecto
