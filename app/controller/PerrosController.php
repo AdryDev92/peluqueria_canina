@@ -7,7 +7,6 @@ use Sirius\Validation\Validator;
 class PerrosController extends BaseController
 {
 
-
     public function getNew()
     {
         $errors = array();  // Array donde se guardaran los errores de validación
@@ -130,7 +129,6 @@ class PerrosController extends BaseController
             $validator->add('edad:Edad', 'required', [], $requiredFieldMessageError);
 
 
-
             // Extraemos los datos enviados por POST
             $perros['id'] = $id;
             $perros['nombre'] = htmlspecialchars(trim($_POST['nombre']));
@@ -200,53 +198,6 @@ class PerrosController extends BaseController
 
     }
 
-/*    public function postIndex($id)
-    {
-        $errors = [];
-        $validator = new Validator();
-
-        $validator->add('name:Nombre', 'required', [], 'El {label} es necesario para comentar');
-        $validator->add('name:Nombre', 'minlength', ['min' => 5], 'El {label} debe tener al menos 5 caracteres');
-        $validator->add('email:Email', 'required', [], 'El {label} no es válido');
-        $validator->add('email:Email', 'required', [], 'El {label} es necesario para comentar');
-        $validator->add('comment:Comentario', 'required', [], 'Aunque los silencios a veces dicen mucho no se permiten comentarios vacíos');
-
-        if ($validator->validate($_POST)) {
-            $comment = new Comment();
-
-            $comment->distro_id = $id;
-            $comment->user = $_POST['name'];
-            $comment->email = $_POST['email'];
-            $comment->ip = getRealIP();
-            $comment->text = $_POST['comment'];
-            $comment->approved = true;
-
-            $comment->save();
-
-            header("Refresh: 0 ");
-        } else {
-            $errors = $validator->getMessages();
-        }
-
-        $webInfo = [
-            'title' => 'Página de Distro - DistroADA'
-        ];
-
-        $perros = Perro::find($id);
-        $webInfo = [
-            'title' => 'Página de Distro - DistroADA'
-        ];
-
-        if (!$perros) {
-            return $this->render('404.twig', ['webInfo' => $webInfo]);
-        }
-
-        return $this->render('perro/perro.twig', [
-            'errors' => $errors,
-            'webInfo' => $webInfo,
-            'perro' => $perros,
-        ]);
-    }*/
 
     public function deleteIndex()
     {
