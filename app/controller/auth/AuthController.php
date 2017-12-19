@@ -66,6 +66,7 @@ class AuthController extends BaseController
     }
 
     public function getInvite(){
-        return "Enviada invitación";
+        $respuesta="Email enviado";
+        return $respuesta;
     }
 }
