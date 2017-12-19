@@ -25,7 +25,7 @@ class AuthController extends BaseController
 
         if ($validator->validate($_POST)) {
             $user = Usuario::where('email', $_POST['inputEmail'])->first();
-            if (password_verify($_POST['inputPassword'], $user->password)) {
+            if (isset($user) && password_verify($_POST['inputPassword'], $user->password)) {
                 $_SESSION['userId'] = $user->id;
                 $_SESSION['userName'] = $user->name;
                 $_SESSION['userEmail'] = $user->email;

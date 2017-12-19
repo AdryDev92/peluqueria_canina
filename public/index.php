@@ -77,7 +77,7 @@ $router->group(['before' => 'noAuth'], function ($router){
 $router->get('/',['\App\Controller\HomeController', 'getIndex']);
 $router->get('/perros/{id}', ['\App\Controller\PerrosController', 'getIndex']);
 $router->post('/perros/{id}', ['\App\Controller\PerrosController', 'postIndex']);
-$router->controller('/api', App\Controller\ApiController::class);
+$router->get('/api', App\Controller\ApiController::class);
 
 
 

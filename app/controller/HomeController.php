@@ -52,4 +52,14 @@ class HomeController extends BaseController {
 
         return $auth->getLogout();
     }
+
+    public function postInvite(){
+        $auth = new AuthController();
+        return $auth->postInvite;
+    }
+
+    public function getInvite(){
+        $auth=new AuthController();
+        return $auth->getInvite;
+    }
 }
