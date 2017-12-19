@@ -66,7 +66,7 @@ class AuthController extends BaseController
     }
 
     public function getInvite(){
-        $respuesta="Email enviado";
-        return $respuesta;
+        return $this->render('auth/invite.twig', []);
     }
+
 }
