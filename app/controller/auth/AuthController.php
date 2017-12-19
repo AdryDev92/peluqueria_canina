@@ -6,6 +6,7 @@ use App\Controller\BaseController;
 use App\Log;
 use App\Model\Usuario;
 use Sirius\Validation\Validator;
+use App\Model\Invitacion;
 
 class AuthController extends BaseController
 {
@@ -54,5 +55,17 @@ class AuthController extends BaseController
         unset($_SESSION['userEmail']);
 
         header("Location: " . BASE_URL);
+
+    }
+
+    public function postInvite(){
+        $validator = new Validator();
+
+        $validator->add('inputEmailInvite:Email', 'required', [], 'El {label} es requerido');
+        $validator->add('inputEmailInvite:Email', 'email', [], 'No es un email válido');
+    }
+
+    public function getInvite(){
+        return "Enviada invitación";
     }
 }

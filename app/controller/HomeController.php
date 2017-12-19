@@ -55,11 +55,11 @@ class HomeController extends BaseController {
 
     public function postInvite(){
         $auth = new AuthController();
-        return $auth->postInvite;
+        return $auth->postInvite();
     }
 
     public function getInvite(){
         $auth=new AuthController();
-        return $auth->getInvite;
+        return $auth->getInvite();
     }
 }
