@@ -7,7 +7,7 @@
     "require": {
         "phroute/phroute": "^2.1",
         "twig/twig": "^2.4",
-        "illuminate/database": "^5.5",
+        "illuminate/database": "^6.20",
         "vlucas/phpdotenv": "^2.4",
         "siriusphp/validation": "^2.2",
         "monolog/monolog": "^1.23"
